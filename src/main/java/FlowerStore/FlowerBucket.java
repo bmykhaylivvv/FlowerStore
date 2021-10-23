@@ -1,8 +1,11 @@
 package FlowerStore;
 
+import lombok.ToString;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@ToString
 public class FlowerBucket {
     List<FlowerPack> flowerPacks = new ArrayList<FlowerPack>();
 
@@ -19,6 +22,4 @@ public class FlowerBucket {
 
         return price;
     }
-
-
 }
