@@ -23,11 +23,7 @@ public class Store {
         FlowerType[] flowerTypes = {FlowerType.ROSE,  FlowerType.TULIP, FlowerType.CHAMOMILE };
         FlowerType randomFlowerType = flowerTypes[rnd.nextInt(3)];
 
-        Flower randomFlower = new Flower(randomFlowerType);
-        randomFlower.setPrice(randomPrice);
-        randomFlower.setSepalLength(randomSepalLength);
-        randomFlower.setColor(randomColor);
-
+        Flower randomFlower = new Flower(randomPrice, randomSepalLength, randomColor, randomFlowerType);
         return randomFlower;
     }
 

@@ -13,11 +13,7 @@ class FlowerTest {
 
     @BeforeEach
     void setUp() {
-        flower = new Flower(FlowerType.CHAMOMILE);
-        flower.setPrice(10);
-        flower.setSepalLength(5);
-        flower.setColor(new int[] {128, 128, 128});
-        flower.setFlowerType(FlowerType.ROSE);
+        flower = new Flower(10, 5, new int[] {128, 128, 128}, FlowerType.ROSE);
     }
 
     @Test

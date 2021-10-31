@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ToString
-public class FlowerBucket {
+public class FlowerBucket extends Item{
     List<FlowerPack> flowerPacks = new ArrayList<FlowerPack>();
 
     public void addFlowerPack(FlowerPack flowerPack) {
@@ -21,5 +21,10 @@ public class FlowerBucket {
         }
 
         return price;
+    }
+
+    @Override
+    public String getDescription() {
+        return "It`s an amazing bucket. Price: " + this.getPrice();
     }
 }
