@@ -1,6 +1,9 @@
 import FlowerStore.*;
 import decorators.PaperDecorator;
 import decorators.RibbonDecorator;
+import users.Receiver;
+import users.Sender;
+import users.Status;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,5 +24,13 @@ public class Main {
         flowerBucket.addFlowerPack(bucketPack);
 
         System.out.println(new RibbonDecorator(flowerBucket).getPrice());
+
+        Receiver receiver = new Receiver();
+        System.out.println(receiver.userId);
+        receiver.update(Status.PROCESSING);
+
+        Sender sender = new Sender();
+        System.out.println(sender.userId);
+        sender.update(Status.COMPLETED);
     }
 }
